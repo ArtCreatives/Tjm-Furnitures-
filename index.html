@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="TJM Furniture – Premium beds, sofas, wardrobes, kitchens & more. Quality craftsmanship, modern designs, and affordable luxury." />
+    <meta name="keywords" content="TJM Furniture, beds, sofas, wardrobes, kitchens, lounge chairs, TV stands, furniture catalog, home decor" />
+    <meta name="author" content="TJM Furniture" />
+    <meta property="og:title" content="TJM Furniture – Premium Home & Office Catalog" />
+    <meta property="og:description" content="Explore our extensive collection of beds, sofas, wardrobes, kitchens, and lounge furniture." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://placehold.co/1200x630/1a3a8a/f5c842?text=TJM+Furniture" />
+    <title>TJM Furniture – Premium Beds, Sofas, Wardrobes & Kitchens Catalog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <style>
+        /* ───────── RESET & BASE ───────── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --blue: #1a3a8a;
+            --blue-dark: #0f2866;
+            --blue-light: #2a5ac8;
+            --yellow: #f5c842;
+            --yellow-light: #ffdd66;
+            --yellow-dark: #dbaa2a;
+            --cream: #faf7f0;
+            --gray: #f0ede8;
+            --dark: #1e1e1e;
+            --shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+            --radius: 28px;
+            --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ───────── SCROLLBAR ───────── */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--blue);
+            border-radius: 12px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--blue-dark);
+        }
+
+        /* ───────── HEADER ───────── */
+        header {
+            background: var(--blue-dark);
+            color: #fff;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+            border-bottom: 3px solid var(--yellow);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 6px;
+            background: #fff;
+            padding: 4px;
+        }
+        .logo .brand-blue {
+            color: #fff;
+        }
+        .logo .brand-yellow {
+            color: var(--yellow);
+        }
+        nav ul {
+            display: flex;
+            gap: 8px 22px;
+            list-style: none;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        nav ul li a {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+            letter-spacing: 0.3px;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--yellow);
+            border-bottom-color: var(--yellow);
+        }
+        .nav-cta {
+            background: var(--yellow);
+            color: var(--blue-dark) !important;
+            padding: 8px 22px !important;
+            border-radius: 60px;
+            font-weight: 700;
+            border: none !important;
+            transition: var(--transition);
+        }
+        .nav-cta:hover {
+            background: #fff;
+            color: var(--blue-dark) !important;
+            transform: scale(1.04);
+        }
+        .mobile-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* ───────── HERO ───────── */
+        .hero {
+            position: relative;
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--blue-dark) 0%, #0d1f4a 60%, var(--blue) 100%);
+            overflow: hidden;
+            padding: 40px 0;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(245, 200, 66, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 80% 30%, rgba(26, 58, 138, 0.3) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #fff;
+            letter-spacing: -1.5px;
+        }
+        .hero-content h1 .highlight {
+            color: var(--yellow);
+            position: relative;
+        }
+        .hero-content h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--yellow);
+            border-radius: 4px;
+            opacity: 0.5;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 500px;
+            margin: 24px 0 32px;
+            line-height: 1.7;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 34px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            background: #fff;
+            color: var(--blue-dark);
+        }
+        .btn-primary {
+            background: var(--yellow);
+            color: var(--blue-dark);
+            box-shadow: 0 8px 24px rgba(245, 200, 66, 0.35);
+        }
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(245, 200, 66, 0.45);
+            background: var(--yellow-light);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .btn-outline:hover {
+            border-color: var(--yellow);
+            background: rgba(245, 200, 66, 0.12);
+            transform: translateY(-4px);
+        }
+
+        /* Hero Image Animation */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 580px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+            animation: floatHero 6s ease-in-out infinite;
+            border: 4px solid rgba(245, 200, 66, 0.2);
+        }
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoomPulse 12s ease-in-out infinite alternate;
+        }
+        .hero-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 58, 138, 0.2) 0%, rgba(245, 200, 66, 0.1) 100%);
+            pointer-events: none;
+        }
+        .floating-badge {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            padding: 12px 20px;
+            border-radius: 60px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            animation: floatBadge 5s ease-in-out infinite;
+            color: var(--blue-dark);
+            z-index: 5;
+        }
+        .floating-badge i {
+            font-size: 1.4rem;
+            color: var(--yellow);
+        }
+        .floating-badge:nth-child(2) {
+            top: 10%;
+            right: -8%;
+            animation-delay: 0.8s;
+        }
+        .floating-badge:nth-child(3) {
+            bottom: 18%;
+            left: -10%;
+            animation-delay: 1.6s;
+        }
+        .floating-badge:nth-child(4) {
+            bottom: 5%;
+            right: 5%;
+            animation-delay: 2.4s;
+        }
+
+        @keyframes floatHero {
+            0%,
+            100% {
+                transform: translateY(0) rotate(-2deg);
+            }
+            50% {
+                transform: translateY(-18px) rotate(2deg);
+            }
+        }
+        @keyframes zoomPulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.06);
+            }
+        }
+        @keyframes floatBadge {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+
+        /* ───────── SECTION COMMON ───────── */
+        .section {
+            padding: 80px 0;
+        }
+        .section-alt {
+            background: #fff;
+        }
+        .section-dark {
+            background: var(--blue-dark);
+            color: #fff;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+        .section-title .highlight {
+            color: var(--yellow);
+        }
+        .section-sub {
+            text-align: center;
+            max-width: 620px;
+            margin: 0 auto 48px;
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .section-dark .section-sub {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--yellow);
+            margin: 14px auto 0;
+            border-radius: 4px;
+        }
+        .section-dark .section-title:after {
+            background: var(--yellow);
+        }
+
+        /* ───────── PRODUCT GRID ───────── */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp 0.7s ease forwards;
+        }
+        .product-card:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+        .product-card:nth-child(2) {
+            animation-delay: 0.10s;
+        }
+        .product-card:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+        .product-card:nth-child(4) {
+            animation-delay: 0.20s;
+        }
+        .product-card:nth-child(5) {
+            animation-delay: 0.25s;
+        }
+        .product-card:nth-child(6) {
+            animation-delay: 0.30s;
+        }
+        .product-card:nth-child(7) {
+            animation-delay: 0.35s;
+        }
+        .product-card:nth-child(8) {
+            animation-delay: 0.40s;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+            border-color: var(--yellow);
+        }
+        .product-card .img-wrap {
+            height: 220px;
+            overflow: hidden;
+            background: var(--gray);
+            position: relative;
+        }
+        .product-card .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .product-card:hover .img-wrap img {
+            transform: scale(1.05);
+        }
+        .product-card .badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--yellow);
+            color: var(--blue-dark);
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 4px 14px;
+            border-radius: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .product-card .body {
+            padding: 20px 22px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card .body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .product-card .body .desc {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            flex: 1;
+        }
+        .product-card .body .price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--blue);
+            margin: 8px 0 14px;
+        }
+        .product-card .body .price .old {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        .product-card .btn-sm {
+            background: var(--blue);
+            color: #fff;
+            border: none;
+            padding: 12px 0;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+        }
+        .product-card .btn-sm:hover {
+            background: var(--yellow);
+            color: var(--blue-dark);
+        }
+
+        /* ───────── SOCIAL BAR ───────── */
+        .social-bar {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            padding: 20px 0 10px;
+            flex-wrap: wrap;
+        }
+        .social-bar a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 1.6rem;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .social-bar a:hover {
+            background: var(--yellow);
+            color: var(--blue-dark);
+            transform: translateY(-6px) scale(1.05);
+            border-color: var(--yellow);
+            box-shadow: 0 10px 30px rgba(245, 200, 66, 0.25);
+        }
+
+        /* ───────── TESTIMONIALS ───────── */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(4px);
+            padding: 28px 24px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .testimonial-card:hover {
+            border-color: var(--yellow);
+            transform: translateY(-6px);
+        }
+        .testimonial-card .stars {
+            color: var(--yellow);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+        .testimonial-card p {
+            margin: 16px 0;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .testimonial-card h4 {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* ───────── CONTACT ───────── */
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+        .contact-info .detail {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .contact-info .detail i {
+            width: 40px;
+            height: 40px;
+            background: rgba(245, 200, 66, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--yellow);
+            font-size: 1.1rem;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--yellow);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .contact-form textarea {
+            border-radius: 20px;
+            min-height: 130px;
+            resize: vertical;
+        }
+        .contact-form .btn-submit {
+            background: var(--yellow);
+            color: var(--blue-dark);
+            border: none;
+            padding: 16px 40px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+        .contact-form .btn-submit:hover {
+            background: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(245, 200, 66, 0.3);
+        }
+
+        /* ───────── VIDEO REAL SECTION ───────── */
+        .video-section {
+            background: #0b1a33;
+            padding: 60px 0 40px;
+            color: #fff;
+            border-top: 2px solid var(--yellow);
+            border-bottom: 2px solid var(--yellow);
+        }
+        .video-section .section-title {
+            color: #fff;
+        }
+        .video-section .section-title:after {
+            background: var(--yellow);
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .video-card {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+        }
+        .video-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--yellow);
+        }
+        .video-card .video-thumb {
+            position: relative;
+            padding-top: 56.25%;
+            background: #1e2a4a;
+            overflow: hidden;
+        }
+        .video-card .video-thumb img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .video-card .video-thumb .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(245, 200, 66, 0.85);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--blue-dark);
+            transition: var(--transition);
+        }
+        .video-card:hover .video-thumb .play-icon {
+            background: var(--yellow);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .video-card .video-info {
+            padding: 16px 20px;
+        }
+        .video-card .video-info h4 {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .video-card .video-info p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ───────── FOOTER ───────── */
+        footer {
+            background: #0b1a33;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 50px 0 30px;
+            border-top: 3px solid var(--yellow);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .footer-brand .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .footer-brand .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 6px;
+            background: #fff;
+            padding: 4px;
+        }
+        .footer-brand p {
+            max-width: 300px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.55);
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.55);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+        .footer-col ul li a:hover {
+            color: var(--yellow);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* ───────── FLOATING CALL ───────── */
+        .floating-call {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #25d366;
+            color: #000;
+            padding: 14px 24px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .floating-call i {
+            font-size: 1.4rem;
+        }
+        .floating-call:hover {
+            transform: scale(1.06) translateY(-4px);
+            box-shadow: 0 14px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ───────── RESPONSIVE ───────── */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-image-wrapper {
+                max-width: 420px;
+                margin: 0 auto;
+            }
+            .floating-badge {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            .contact-wrap {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: nowrap;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 20px 0 10px;
+                gap: 10px;
+            }
+            nav ul.open {
+                display: flex;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .hero {
+                min-height: auto;
+                padding: 60px 0;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-image-wrapper {
+                max-width: 300px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .floating-call {
+                padding: 12px 18px;
+                font-size: 0.85rem;
+                bottom: 16px;
+                right: 16px;
+            }
+            .floating-call span {
+                display: none;
+            }
+            .video-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            .logo img {
+                height: 40px;
+            }
+        }
+
+        /* ───────── UTILITY ───────── */
+        .text-center {
+            text-align: center;
+        }
+        .mt-20 {
+            margin-top: 20px;
+        }
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        .gap-8 {
+            gap: 8px;
+        }
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .w-full {
+            width: 100%;
+        }
+        video-showcase {
+            background: #111;
+            color: white;
+            padding: 70px 0;
+        }
+        .video-showcase h2 { color:rgba(245, 200, 66, 0.85); }
+        .video-showcase h2:after { background:var(--blue-dark); }
+        .video-reel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .video-card {
+            flex: 1 1 380px;
+            background: #1e1e1e;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 0.25s;
+        }
+        .video-card:hover { transform: translateY(-6px); }
+        .video-card video {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+        .video-card h4 {
+            padding: 18px 20px 8px;
+            font-size: 1.3rem;
+        }
+        .video-card p { padding: 0 20px 20px; color: #ccc; }
+        .showcase-card {
+            background: var(--card);
+            border-radius: 36px;
+            margin-bottom: 55px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transform: translateY(0);
+        }
+        .showcase-card h3 {
+            font-size: 1.9rem;
+            padding: 28px 30px 10px 30px;
+            color: var(--text);
+            border-left: 6px solid var(--accent);
+            margin-bottom: 20px;
+        }
+        .media-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 0 30px 30px 30px;
+            justify-content: center;
+        }
+        .media-item {
+            flex: 1 1 240px;
+            background: var(--bg-2);
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+            transform: translateY(0);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .media-item:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); }
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            display: block;
+        }
+        .media-item p {
+            padding: 12px;
+            font-weight: 500;
+            text-align: center;
+            background: var(--bg-2);
+            color: var(--text);
+        }
+
+        .portfolio {
+            padding: 70px 0;
+            background: var(--soft);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+        .portfolio-item {
+            position: relative;
+            border-radius: 26px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            background: var(--card);
+            border: 1px solid var(--border);
+            transition: transform 0.28s, box-shadow 0.28s;
+        }
+        .portfolio-item:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); }
+        .portfolio-item img, .portfolio-item video {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: transform 0.4s;
+            display: block;
+        }
+        .portfolio-item:hover img, .portfolio-item:hover video { transform: scale(1.03); }
+        .portfolio-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px 15px 15px;
+        }
+        .portfolio-info h3 { margin-bottom: 5px; font-size: 1.3rem; }
+        .portfolio-info p { color: #e7e7e7; }
+
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <!-- Logo image – replace src with your actual logo -->
+                <img src="images/TJM-FURNITURES-LOGO.png" alt="TJM Furniture Logo" onerror="this.src='https://placehold.co/200x80/1a3a8a/f5c842?text=TJM'">
+                <span class="brand-blue">TJM</span><span class="brand-yellow">Furniture</span>
+            </a>
+            <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#beds" class="active">Beds</a></li>
+                    <li><a href="#sofas">Sofas</a></li>
+                    <li><a href="#bachelor-pad">Bachelor Pad</a></li>
+                    <li><a href="#tv-stand">TV stand</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#side-drawers">Side Drawers</a></li>
+                    <li><a href="#cot-beds">Cot Beds</a></li>
+                    <li><a href="#chest-of-drawer">Chest of Drawer</a></li>
+                    <li><a href="#dressing-table">Dressing Table</a></li>
+                    <li><a href="#video-reels">Video reels</a></li>
+                    <li><a href="#contact-section" class="nav-cta"><i class="fas fa-phone"></i> Get Quote</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>
+                    Premium <br />
+                    <span class="highlight">Furniture</span> for<br />
+                    Every Space
+                </h1>
+                <p>
+                    Discover our curated collection of beds, sofas, wardrobes, kitchens,
+                    and lounge furniture — crafted with quality and designed for comfort.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#beds" class="btn btn-primary"><i class="fas fa-store"></i> Explore Catalog</a>
+                    <a href="#contact-section" class="btn btn-outline"><i class="fas fa-comment"></i> Free Consultation</a>
+                </div>
+                <!-- Social Icons in Hero -->
+                <div class="social-bar" style="justify-content:flex-start; padding-top:24px; gap:12px;">
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="images/hero.jpg" alt="TJM Furniture Showroom" loading="lazy" />
+                    <div class="floating-badge" style="top:8%; right:-6%;">
+                        <i class="fas fa-star"></i> 4.9 ★ (240+ reviews)
+                    </div>
+                    <div class="floating-badge" style="bottom:20%; left:-8%;">
+                        <i class="fas fa-truck"></i> Premium 
+                    </div>
+                    <div class="floating-badge" style="bottom:6%; right:4%;">
+                        <i class="fas fa-shield-alt"></i> Quality
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ BEDS SECTION ═══════════ -->
+    <section class="section" id="beds">
+        <div class="container">
+            <h2 class="section-title">🛏️ <span class="highlight">Beds</span> Collection</h2>
+            <p class="section-sub">From classic wooden frames to modern upholstered designs — find your perfect night's sleep.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/BED WITH KIST.jpg" alt="Double Bed" loading="lazy" /><span class="badge"> $250 for King</span></div>
+                    <div class="body"><h3>Haven Upholstered Bed with kist</h3><div class="desc">Double bed .</div><div class="price">$230 <span> </span></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i>Queen $240</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/beds.jpg" alt="Wooden Bed Frame" loading="lazy" /><span class="badge">$190 for King size</span></div>
+                    <div class="body"><h3>Heritage Bed</h3><div class="desc"> Double bed base with headboard $150 .</div><div class="price">$150 </div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i>Queen  $170  </button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/bed with matress.jpg" alt="Storage Bed" loading="lazy" /><span class="badge"> $390 for King</span></div>
+                    <div class="body"><h3>Double Bed with mattress  </h3><div class="desc"></div><div class="price">$340</div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i>Queen  $350 </button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/bed with matttress.jpg" alt="Storage Bed" loading="lazy" /><span class="badge">$250 for King</span></div>
+                    <div class="body"><h3>Double Bed with foam mattress $340 </h3><div class="desc"></div><div class="price">$350</div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i>Queen $260 </button></div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="section" id="beds-second">
+        <div class="container">
+            <h2 class="section-title">🛏️ <span class="highlight"> Second</span> Collection</h2>
+            <p class="section-sub">From classic wooden frames, find your perfect night's sleep.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/single.jpg" alt="Double Bed" loading="lazy" /><span class="badge"> $250 for King</span></div>
+                    <div class="body"><h3>Single Bed $100</h3><div class="desc">3/4 bed $130, .</div><div class="price">$240 <span> </span></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/bed and headboard.jpg" alt="Wooden Bed Frame" loading="lazy" /><span class="badge">$180 for Queen</span></div>
+                    <div class="body"><h3>Double base Bed $170</h3><div class="desc"> King .</div><div class="price"> $200</div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/potable.jpg" alt="Storage Bed" loading="lazy" /><span class="badge">$200 for Queen</span></div>
+                    <div class="body"><h3>Double Bed with headboard $180 </h3><div class="desc"> King.</div><div class="price">$240</div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/uptop.jpg" alt="Storage Bed" loading="lazy" /><span class="badge">$240 for Queen</span></div>
+                    <div class="body"><h3>Double Bed base $190 </h3><div class="desc"> King.</div><div class="price">$260</div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SIDE DRAWERS & HEADBOARDS ═══════════ -->
+    <section class="section section-alt" id="side-drawers">
+        <div class="container">
+            <h2 class="section-title"> <span class="highlight">Side Drawers</span>from $120 </h2>
+            <p class="section-sub">Complete your bedroom with premium storage Side Drawers .</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/draw (2).jpg" alt="Nightstand" loading="lazy" /></div>
+                    <div class="body"><h3>Luna Side Drawer</h3><div class="desc">2 soft-close side drawers.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/draw (4).jpg" alt="Dresser" loading="lazy" /></div>
+                    <div class="body"><h3> Side Drawers</h3><div class="desc">Spacious storage,finish.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/draw (3).jpg" alt="Headboard" loading="lazy" /><span class="badge">Upholstered</span></div>
+                    <div class="body"><h3>Eclipse Side Drawers</h3><div class="desc">tufting upholstery.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/draw.jpg" alt="Radiator Pad" loading="lazy" /></div>
+                    <div class="body"><h3>Headboard and Chist</h3><div class="desc">Stylish cover,custom.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-alt" id="tables">
+        <div class="container">
+            <h2 class="section-title">📦 <span class="highlight"> Tables</span>from $100  </h2>
+            <p class="section-sub">Complete your Sitting Room with premium Tables.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/table (2).jpg" alt="Nightstand" loading="lazy" /></div>
+                    <div class="body"><h3>Headboard</h3><div class="desc">Special.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/table.jpg" alt="Dresser" loading="lazy" /></div>
+                    <div class="body"><h3>  Headboard</h3><div class="desc">Spacious ,finish.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/table (3).jpg" alt="Headboard" loading="lazy" /><span class="badge">Upholstered</span></div>
+                    <div class="body"><h3> Headboard</h3><div class="desc">Deep button tufting, velvet upholstery, adjustable height.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/table (4).jpg" alt="Radiator Pad" loading="lazy" /></div>
+                    <div class="body"><h3>Headboard and Chist</h3><div class="desc">Stylish cover,custom.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-alt" id="tv-stand">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">TV Stand</span>from $100 </h2>
+            <p class="section-sub">Complete your Sitting Room  with premium TV Stands .</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/stand (2).jpg" alt="Nightstand" loading="lazy" /></div>
+                    <div class="body"><h3>Headboard</h3><div class="desc">Special.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/stand (3).jpg" alt="Dresser" loading="lazy" /></div>
+                    <div class="body"><h3>  Headboard</h3><div class="desc">Spacious ,finish.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/stand (4).jpg" alt="Headboard" loading="lazy" /><span class="badge">Upholstered</span></div>
+                    <div class="body"><h3> Headboard</h3><div class="desc">Deep button tufting, velvet upholstery, adjustable height.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/stand.jpg" alt="Radiator Pad" loading="lazy" /></div>
+                    <div class="body"><h3>Headboard and Chist</h3><div class="desc">Stylish cover,custom.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SOFAS / CHASE COUCHES ═══════════ -->
+    <section class="section" id="sofas">
+        <div class="container">
+            <h2 class="section-title"> <span class="highlight">Sofas &amp; Chase Couches</span>from $350 </h2>
+            <p class="section-sub">L-shape, modular, and classic designs — comfort meets style for every living room.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/l shape must.jpg" alt="L-Shape Sofa" loading="lazy" /><span class="badge">L-Shape</span></div>
+                    <div class="body"><h3>Conchis L-Shape Sofa</h3><div class="desc"> lounge, premium fabric.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/sofa (4).jpg" alt="Modular Sofa" loading="lazy" /></div>
+                    <div class="body"><h3>Modular Chase Sofa</h3><div class="desc">  modular pieces.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/sofa (3).jpg" alt="Corner Sofa" loading="lazy" /></div>
+                    <div class="body"><h3>Urban Corner Sofa</h3><div class="desc">Compact , durable linen blend.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/sofa.jpg" alt="Lounge Couch" loading="lazy" /><span class="badge">Lounge</span></div>
+                    <div class="body"><h3> Lounge Couches</h3><div class="desc">Premium , cushions.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ROUNDED OUTTOMAN AND CHAIRS ═══════════ -->
+    <section class="section section-alt" id="lounge">
+        <div class="container">
+            <h2 class="section-title">🪑 <span class="highlight">Lounge Chairs</span> &amp;Rounded Outtoman</h2>
+            <p class="section-sub">Biscuited designs, accent chairs, and statement pieces for any room.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/CHAIRS ROUND BACK.jpg" alt="Accent Chair" loading="lazy" /></div>
+                    <div class="body"><h3>Wing Back Chairs</h3><div class="desc">leather uphostery, premium fabric .</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/rounde automan2.jpg" alt="Armchair" loading="lazy" /></div>
+                    <div class="body"><h3>Mid-Century Armchair</h3><div class="desc">Classic silhouette,  Grey upholstery.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/rounded.png" alt="Ottoman" loading="lazy" /></div>
+                    <div class="body"><h3>Wing Back Chairs</h3><div class="desc">Soft finish.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/ROUND BACK.jpg" alt="TV Stand" loading="lazy" /><span class="badge">Rounde Ottoman</span></div>
+                    <div class="body"><h3>Rounded Ottoman</h3><div class="desc">Modern design Bachelor pad.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ BACHELORS PAD ═══════════ -->
+    <section class="section" id="bachelor-pad">
+        <div class="container">
+            <h2 class="section-title"> <span class="highlight">Bachelor Pad</span> from $250</h2>
+            <p class="section-sub"> custom Bachelor solutions.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/pad (2).jpg" alt="Bachelor pad" loading="lazy" /><span class="badge">Sliding</span></div>
+                    <div class="body"><h3>Eclipse Bachelor Pad</h3><div class="desc">Premium.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/pad (3).jpg" alt="Bachelor pad" loading="lazy" /></div>
+                    <div class="body"><h3>Haven Bachelor pad</h3><div class="desc">Modular integrated lighting.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/pad (4).jpg" alt="Bachelor pad" loading="lazy" /></div>
+                    <div class="body"><h3>CornerFit Elite bachelor pad</h3><div class="desc">Space-maximizing.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/pad.jpg" alt="Bachelor pad" loading="lazy" /></div>
+                    <div class="body"><h3>Bachelor Pad</h3><div class="desc"> compact Premium design.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call to Order</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ COT BED ═══════════ -->
+    <section class="section section-alt" id="cot-beds">
+        <div class="container">
+            <h2 class="section-title"> <span class="highlight">CotBeds</span>from $150</h2>
+            <p class="section-sub">Bespoke  designs with premium finishes and smart Cot Beds.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/cot (2).jpg" alt="Cotbed" loading="lazy" /><span class="badge">Modern</span></div>
+                    <div class="body"><h3>CotBed</h3><div class="desc">High-Quality.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/cot bed (112).jpg" alt="Cotbed" loading="lazy" /></div>
+                    <div class="body"><h3>CotBed</h3><div class="desc">Solid.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/cot bedwadrobe (2).jpg" alt="Cotbed" loading="lazy" /></div>
+                    <div class="body"><h3>Urban Compact Plus</h3><div class="desc">Smart .</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/cot bed.jpg" alt="Cotbed" loading="lazy" /><span class="badge">Island</span></div>
+                    <div class="body"><h3>Cotbed</h3><div class="desc">Premium Quality.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ═══════════ CHEST OF DRAWERS AND DRESSING TABLES ═══════════ -->
+    
+    <section class="section section-alt" id="dressing-table">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">Dressing Table</span>From $150 </h2>
+            <p class="section-sub">Dressing tables designs and with premium finishes and smart.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/dresser (12).jpg" alt="Modern Dresser" loading="lazy" /><span class="badge">Modern</span></div>
+                    <div class="body"><h3>Dressing tables</h3><div class="desc"> Acrylic, soft-close, integrated  colors.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/dresser (8).jpg" alt="Dresser" loading="lazy" /></div>
+                    <div class="body"><h3>Dressing tables</h3><div class="desc">Solid oak, dovetail joinery, spice rack, pull-out pantry.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/dresser (2).jpg" alt="Compact Dresser" loading="lazy" /></div>
+                    <div class="body"><h3>Dressing tables</h3><div class="desc">Smart , soft carousel.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/dresser (7).jpg" alt="Dresser" loading="lazy" /><span class="badge">Premium</span></div>
+                    <div class="body"><h3>Dressing tables</h3><div class="desc"> cooler, matte finish.</div><div class="price"</div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-alt" id="ChestofDrawer">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">Chest of Drawer </span>From $150 </h2>
+            <p class="section-sub">Chest of Drawer  designs and with premium finishes and smart.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/dresser (5).jpg" alt="Modern Dresser" loading="lazy" /><span class="badge">Modern</span></div>
+                    <div class="body"><h3>Chest of Drawer </h3><div class="desc"> Acrylic, soft-close, integrated  colors.</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/dresser (9).jpg" alt="Dresser" loading="lazy" /></div>
+                    <div class="body"><h3>Chest of Drawer </h3><div class="desc">Solid .</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/dresser (13).jpg" alt="Compact Dresser" loading="lazy" /></div>
+                    <div class="body"><h3>Chest of Drawer </h3><div class="desc">Smart , .</div><div class="price"></div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap"><img src="images/dresser (11).jpg" alt="Dresser" loading="lazy" /><span class="badge">Premium</span></div>
+                    <div class="body"><h3>Chest of Drawer </h3><div class="desc"> cooler, matte finish.</div><div class="price"</div><button class="btn-sm orderBtn"><i class="fas fa-phone"></i> Call Quote</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- ═══════════ TESTIMONIALS ═══════════ -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">❤️ What Our <span class="highlight">Clients</span> Say</h2>
+            <p class="section-sub">Real reviews from real customers who transformed their spaces with TJM Furniture.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"TJM designed our entire house – flawless finish and on-time delivery. Highly recommend!"</p>
+                    <h4>— Amanda K.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"The furniture transformed my bedroom. Professional team and premium materials."</p>
+                    <h4>— Jason M.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Excellent service, they adjusted measurements on site. My lounge furniture looks stunning!"</p>
+                    <h4>— Lucy W.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="section section-dark" id="contact-section" style="background:var(--blue);">
+        <div class="container">
+            <h2 class="section-title">📞 Get Your <span class="highlight">Free Quote</span></h2>
+            <p class="section-sub">Request a 3D design, price estimate, or ask our experts about custom furniture.</p>
+            <div class="contact-wrap">
+                <div class="contact-info">
+                    <h3 style="color:#fff;">Let's Talk Furniture</h3>
+                    <p>Our team is ready to help you design the perfect space. Reach out for a free consultation.</p>
+                    <div class="detail"><i class="fas fa-phone"></i> <span>+263 777 923 449</span></div>
+                    <div class="detail"><i class="fas fa-envelope"></i> <span>design@tjmfurniture.com</span></div>
+
+                    <!-- Social Icons -->
+                    <div class="social-bar" style="justify-content:flex-start; padding-top:16px; gap:14px;">
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="leadForm">
+                    <input type="text" placeholder="Full name" id="fullName" required />
+                    <input type="email" placeholder="Email address" id="emailAddr" required />
+                    <input type="tel" placeholder="Phone number (optional)" />
+                    <textarea placeholder="Tell us about your project (bedroom, kitchen, wardrobe...)" rows="4"></textarea>
+                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ VIDEO REAL SECTION (NEW) ═══════════ -->
+    <section class="video-showcase reveal">
+            <div class="container">
+                <h2>✨ Furniture Design's Video Reel's ✨</h2>
+                <p style="text-align:center; margin-bottom: 35px; color: #3004b2;">Watch our High Quality  furniture Design's</p>
+                <div class="video-reel">
+                    <div class="video-card">
+                        <video controls poster="">
+                            <source src="images/VID-20260714-WA0057.mp4" type="video/mp4">
+                        </video>
+                        <h4>Craftsman</h4>
+                        <p>Crafting Couches and Side drawers.</p>
+                    </div>
+                    <div class="video-card">
+                        <video controls>
+                            <source src="images/VID-20260714-WA0140.mp4" type="video/mp4">
+                        </video>
+                        <h4>find your perfect night's sleep</h4>
+                        <p>From classic wooden frames to modern upholstered designs</p>
+                    </div>
+                    <div class="video-card">
+                        <video controls>
+                            <source src="images/VID-20260714-WA0141.mp4" type="video/mp4">
+                        </video>
+                        <h4>Website with Cartoon UI</h4>
+                        <p>find your perfect night's sleep</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+             <div class="showcase-card reveal">
+                    <h3><i class="fas fa-film"></i> Interior Design (Furniture)</h3>
+                    <div class="media-gallery">
+                        <div class="media-item"><video controls muted loop><source src="images/couch.mp4" type="video/mp4"></video><p>Bachelor pad</p></div>
+                        <div class="media-item"><video controls muted><source src="images/wadrobe.mp4" type="video/mp4"></video><p>Couches</p></div>
+                        <div class="media-item"><video controls muted><source src="images/b6cb2e89-192e-4982-bb8e-adefb5366ee1-watermark.mp4" type="video/mp4"></video><p>Lounge(Sitting room)</p></div>
+                        <div class="media-item"><video controls muted><source src="images/ff849b76-e903-4c68-81b2-3cfdee974eb3-watermark.mp4" type="video/mp4"></video><p>Bedroom</p></div>
+                    </div>
+                </div>
+            </div>
+             <div class="showcase-card reveal">
+                    <h3><i class="fas fa-film"></i> Interior Design (Furniture)</h3>
+                    <div class="media-gallery">
+                        <div class="media-item"><video controls muted loop><source src="images/HEADBOARD (2).mp4" type="video/mp4"></video><p>Bachelor pad</p></div>
+                        <div class="media-item"><video controls muted><source src="images/COUCH (2).mp4" type="video/mp4"></video><p>Couches</p></div>
+                        <div class="media-item"><video controls muted><source src="images/BED (2).mp4" type="video/mp4"></video><p>Lounge(Sitting room)</p></div>
+                        <div class="media-item"><video controls muted><source src="images/DRAWER.mp4" type="video/mp4"></video><p>Bedroom</p></div>
+                    </div>
+                </div>
+            </div>
+             <div class="showcase-card reveal">
+                    <h3><i class="fas fa-film"></i> Interior Design (Furniture)</h3>
+                    <div class="media-gallery">
+                        <div class="media-item"><video controls muted loop><source src="images/headboard.mp4" type="video/mp4"></video><p>Bachelor pad</p></div>
+                        <div class="media-item"><video controls muted><source src="images/L SHAPE.mp4" type="video/mp4"></video><p>Couches</p></div>
+                        <div class="media-item"><video controls muted><source src="images/COUCHES.mp4" type="video/mp4"></video><p>Lounge(Sitting room)</p></div>
+                        <div class="media-item"><video controls muted><source src="images/SOFAS.mp4" type="video/mp4"></video><p>Bedroom</p></div>
+                    </div>
+                </div>
+            </div>
+             <div class="showcase-card reveal">
+                    <h3><i class="fas fa-film"></i> Interior Design (Furniture)</h3>
+                    <div class="media-gallery">
+                        <div class="media-item"><video controls muted loop><source src="images/BED SET.mp4" type="video/mp4"></video><p>Bachelor pad</p></div>
+                        <div class="media-item"><video controls muted><source src="images/ROUNDED.mp4" type="video/mp4"></video><p>Couches</p></div>
+                        <div class="media-item"><video controls muted><source src="images/CHIST.mp4" type="video/mp4"></video><p>Lounge(Sitting room)</p></div>
+                        <div class="media-item"><video controls muted><source src="images/HEADBOARD AND CHIST.mp4" type="video/mp4"></video><p>Bedroom</p></div>
+                    </div>
+                </div>
+            </div>
+             <div class="showcase-card reveal">
+                    <h3><i class="fas fa-film"></i> Interior Design (Furniture)</h3>
+                    <div class="media-gallery">
+                        <div class="media-item"><video controls muted loop><source src="images/PIECE.mp4" type="video/mp4"></video><p>Bachelor pad</p></div>
+                        <div class="media-item"><video controls muted><source src="images/SOFASA.mp4" type="video/mp4"></video><p>Couches</p></div>
+                        <div class="media-item"><video controls muted><source src="images/wadrobe.mp4" type="video/mp4"></video><p>Lounge(Sitting room)</p></div>
+                        <div class="media-item"><video controls muted><source src="images/VID-20260714-WA0140.mp4" type="video/mp4"></video><p>Bedroom</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <!-- Footer Logo Image -->
+                        <img src="images/TJM-FURNITURES-LOGO.png" alt="TJM Furniture Logo" onerror="this.src='https://placehold.co/200x80/1a3a8a/f5c842?text=TJM'">
+                        <span class="brand-blue">TJM</span><span class="brand-yellow">Furniture</span>
+                    </div>
+                    <p>Premium furniture for every room. Crafted with care, designed for life.</p>
+                    <div style="margin-top:16px; display:flex; gap:12px;">
+                        <a href="#" style="color:rgba(255,255,255,0.4); font-size:1.4rem; transition:0.3s;" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" style="color:rgba(255,255,255,0.4); font-size:1.4rem; transition:0.3s;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color:rgba(255,255,255,0.4); font-size:1.4rem; transition:0.3s;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color:rgba(255,255,255,0.4); font-size:1.4rem; transition:0.3s;" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" style="color:rgba(255,255,255,0.4); font-size:1.4rem; transition:0.3s;" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#beds">Beds</a></li>
+                        <li><a href="#sofas">Sofas &amp; Couches</a></li>
+                        <li><a href="#bachelor-pad">Bachelor pad</a></li>
+                        <li><a href="#tv-stand">TV Stand</a></li>
+                        <li><a href="#tables">Tables</a></li>
+                        <li><a href="#cot-beds">Cot Beds</a></li>
+                        <li><a href="#chest-of-drawer">Chest of Drawer</a></li>
+                        <li><a href="#dressing-table">Dressing Table</a></li>
+                        <li><a href="#lounge">Lounge Chairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Delivery Info</a></li>
+                        <li><a href="#">Assembly Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+263777923449">+263 777 923 449</a></li>
+                        <li><a href="mailto:design@tjmfurniture.com">design@tjmfurniture.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 TJM Furniture — Premium Home &amp; Office. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════ FLOATING CALL BUTTON ═══════════ -->
+    <button class="floating-call" id="floatingCallBtn">
+        <i class="fas fa-phone-alt"></i>
+        <span>Call Now</span>
+    </button>
+
+    <!-- ═══════════ JAVASCRIPT ═══════════ -->
+    <script>
+        // ─── PHONE NUMBER ───
+        const PHONE = "+263777923449";
+
+        function dialNow() {
+            window.location.href = `tel:${PHONE}`;
+        }
+
+        // ─── ATTACH DIAL TO ALL ORDER BUTTONS ───
+        document.querySelectorAll('.orderBtn').forEach(btn => {
+            btn.addEventListener('click', dialNow);
+        });
+        document.getElementById('floatingCallBtn')?.addEventListener('click', dialNow);
+
+        // ─── MOBILE MENU TOGGLE ───
+        const toggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (toggle && navMenu) {
+            toggle.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+                toggle.innerHTML = navMenu.classList.contains('open') ?
+                    '<i class="fas fa-times"></i>' :
+                    '<i class="fas fa-bars"></i>';
+            });
+        }
+
+        // ─── CONTACT FORM ───
+        const form = document.getElementById('leadForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('fullName')?.value.trim();
+                const email = document.getElementById('emailAddr')?.value.trim();
+                if (!name || !email) {
+                    alert('Please fill in your name and email.');
+                    return;
+                }
+                alert(`✅ Thank you ${name}! Your design request was sent. A TJM specialist will call you within 24h. For instant help, dial ${PHONE}`);
+                form.reset();
+            });
+        }
+
+        // ─── SMOOTH SCROLL FOR NAV LINKS ───
+        document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // close mobile menu
+                    if (navMenu && navMenu.classList.contains('open')) {
+                        navMenu.classList.remove('open');
+                        if (toggle) toggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // ─── ACTIVE NAV LINK ON SCROLL ───
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav ul li a:not(.nav-cta)');
+
+        function updateActiveLink() {
+            let current = '';
+            sections.forEach(section => {
+                const top = section.offsetTop - 120;
+                if (window.scrollY >= top) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+            });
+        }
+        window.addEventListener('scroll', updateActiveLink);
+        updateActiveLink();
+
+        // ─── PRODUCT CARD REVEAL ───
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(40px)';
+            card.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+            observer.observe(card);
+        });
+
+        // ─── KEYBOARD ACCESSIBILITY ───
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                if (toggle) toggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        console.log('🚀 TJM Furniture — Premium Catalog with Video Real Loaded.');
+        console.log('📞 Call us at ' + PHONE);
+    </script>
+
+</body>
+</html>
